@@ -1,3 +1,4 @@
+'use client'
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -9,9 +10,13 @@ import {
 } from "@heroui/navbar";
 import NextLink from "next/link";
 import { ThemeSwitch } from "@/components/theme-switch";
+import { ChevronDown } from "lucide-react";
+import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@heroui/dropdown";
+import { Button } from "@heroui/button";
+import Link from "next/link";
 
 export const Navbar = () => {
- 
+
   return (
     <HeroUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -21,12 +26,47 @@ export const Navbar = () => {
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          <NavbarItem>
-            <NextLink href="/">Home</NextLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NextLink href="/produtos">Produtos</NextLink>
-          </NavbarItem>
+          <Dropdown>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                endContent={<ChevronDown />}
+                variant="light"
+                radius="sm"
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+              >
+                Cadastro
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu>
+              <DropdownItem key="grupo" href="/grupo">
+                 Grupo
+              </DropdownItem>
+              <DropdownItem key="marca">
+               <Link href="/marca">Marca</Link>
+              </DropdownItem>
+              <DropdownItem key="produto">
+               <Link href="/produto">Produto</Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+          <Dropdown>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                endContent={<ChevronDown />}
+                variant="light"
+                radius="sm"
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+              >
+                Movimento
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu>
+              <DropdownItem key="compra">Compra</DropdownItem>
+              <DropdownItem key="venda">Venda</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </ul>
       </NavbarContent>
       <NavbarContent
@@ -42,12 +82,12 @@ export const Navbar = () => {
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
- 
+
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
-         <NavbarMenuItem>
+          <NavbarMenuItem>
             Menu
-         </NavbarMenuItem> 
+          </NavbarMenuItem>
         </div>
       </NavbarMenu>
       {/** fim- Menu responsivo para resoluções de tela menores */}
