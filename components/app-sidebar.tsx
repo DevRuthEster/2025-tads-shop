@@ -48,17 +48,17 @@ const data = {
       items: [
         {
           title: "Produto",
-          url: "/cadastro/produto",
+          url: "/cadastro/produtos",
           icon: Package,
         },
         {
           title: "Marca",
-          url: "/cadastro/marca",
+          url: "/cadastro/marcas",
           icon: Tags,
         },
         {
           title: "Grupo",
-          url: "/cadastro/Grupo",
+          url: "/cadastro/grupos",
           icon: ListFilter,
         },
         {
