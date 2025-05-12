@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TADS Shop
 
-## Getting Started
+## Sobre o Projeto
 
-First, run the development server:
+TADS Shop é uma aplicação web moderna desenvolvida como parte do curso de Tecnologia em Análise e Desenvolvimento de Sistemas (TADS) do IFMS. Este projeto demonstra a implementação de uma interface rica para uma plataforma de e-commerce, utilizando tecnologias de ponta no desenvolvimento front-end.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tecnologias Utilizadas
+
+- **Next.js 15**: Framework React para renderização do lado do servidor (SSR) e geração de sites estáticos
+- **React 19**: Biblioteca para construção de interfaces de usuário
+- **TypeScript**: Linguagem que adiciona tipagem estática ao JavaScript
+- **Tailwind CSS**: Framework CSS para design responsivo e componentes customizáveis
+- **Shadcn UI**: Biblioteca de componentes acessíveis e customizáveis construída sobre o Radix UI
+- **Next Themes**: Solução para gerenciamento de temas (claro/escuro)
+
+## Estrutura do Projeto
+
+```
+app/                  # Diretórios e arquivos da aplicação Next.js
+  dashboard/          # Página do dashboard administrativo
+  page.tsx            # Página inicial
+  layout.tsx          # Layout principal da aplicação
+components/           # Componentes reutilizáveis
+  ui/                 # Componentes de interface do usuário
+hooks/                # React hooks personalizados
+lib/                  # Funções utilitárias e helpers
+public/               # Arquivos estáticos (imagens, ícones)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requisitos de Sistema
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js 18.x ou superior
+- npm 8.x ou superior (ou yarn/pnpm)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Como Executar o Projeto
 
-## Learn More
+1. Clone este repositório:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/seu-usuario/tads-shop.git
+   cd tads-shop
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Instale as dependências:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   # ou
+   yarn install
+   # ou
+   pnpm install
+   ```
 
-## Deploy on Vercel
+3. Execute o servidor de desenvolvimento:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   # ou
+   pnpm dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Acesse a aplicação em `http://localhost:3000`
+
+## Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Compila o projeto para produção
+- `npm run start` - Inicia o servidor em modo de produção (após build)
+- `npm run lint` - Executa a verificação de linting
+
+## Características
+
+- Design responsivo para dispositivos móveis e desktop
+- Tema claro e escuro
+- Interface de administração com dashboard
+- Componentes acessíveis seguindo as melhores práticas
+
+## Contribuição
+
+Para contribuir com este projeto:
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua funcionalidade (`git checkout -b feature/nova-funcionalidade`)
+3. Faça commit das suas alterações (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Envie para a branch remota (`git push origin feature/nova-funcionalidade`)
+5. Abra um Pull Request
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
+
+## Desenvolvido por
+
+Alunos do curso de TADS - IFMS, 2025.
