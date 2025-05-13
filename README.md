@@ -77,20 +77,6 @@ public/               # Arquivos estáticos (imagens, ícones)
 - Interface de administração com dashboard
 - Componentes acessíveis seguindo as melhores práticas
 
-## Contribuição
 
-Para contribuir com este projeto:
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua funcionalidade (`git checkout -b feature/nova-funcionalidade`)
-3. Faça commit das suas alterações (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Envie para a branch remota (`git push origin feature/nova-funcionalidade`)
-5. Abra um Pull Request
 
-## Licença
-
-Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
-
-## Desenvolvido por
-
-Alunos do curso de TADS - IFMS, 2025.
