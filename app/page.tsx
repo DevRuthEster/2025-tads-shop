@@ -32,7 +32,7 @@ export default function Page() {
         <ul>
           {
             marcas.map((marca) => {
-              <li>{marca.nome}</li>
+             <li>{marca.nome}</li>
             })
           }
         </ul>
