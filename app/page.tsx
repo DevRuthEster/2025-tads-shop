@@ -7,17 +7,17 @@ export default function Page() {
   const [contador, setContador] = useState(0)
   let [marcas, setMarcas] = useState([])
 
-async function listarMarcas(){
-  let response = await fetch('http://10.10.67.20:3002//marcas')
-  let listaMarcas = await response.json()
-  setMarcas(listaMarcas)
-}
+  async function listarMarcas() {
+    let response = await fetch('http://10.10.67.20:3002//marcas')
+    let listaMarcas = await response.json()
+    setMarcas(listaMarcas)
+  }
 
-useEffect(() => {
+  useEffect(() => {
 
 
- },[] )  
-listarMarcas
+  }, [])
+  listarMarcas
   //funcao para incrementar o contador
   function incrementar() {
     setContador(contador + 1)
@@ -30,11 +30,11 @@ listarMarcas
       <div className="mt-4">
         <h2>Marcas</h2>
         <ul>
-{
-  marcas.map((marca)=>{
-    <li>{marca.nome}</li>
-  })
-}
+          {
+            marcas.map((marca) => {
+              <li>{marca.nome}</li>
+            })
+          }
         </ul>
 
       </div>
